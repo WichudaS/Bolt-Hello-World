@@ -11,6 +11,16 @@ const app = new App({
   signingSecret: process.env.SIGNING_SECRET
 });
 
+//listening to 'Hello' on anywhere in scope
+app.message("hello", async function(message, say) {
+  //say 'Hello USER!'
+  await say('Hello, <@${message.user}>!');
+});
+
+
+
+
+
 (async() => {
   //start the App
   app.start(process.env.PORT || 3000)
