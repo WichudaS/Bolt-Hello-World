@@ -13,7 +13,7 @@ const app = new App({
 
 //listening to 'Hello' on anywhere in scope
 app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({context, say}) {
-  console.log(message);
+  console.log(context);
   console.log('Request ended');
   //say 'Hello USER!'
   const greeting = context.matches[0];
