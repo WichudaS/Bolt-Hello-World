@@ -12,11 +12,12 @@ const app = new App({
 });
 
 //listening to 'Hello' on anywhere in scope
-app.message("hello" || "Hi" || "Hey" || "hey" || "hi" || "สวัสดี" || "ฮาย", async function({message, say}) {
-  //say 'Hello USER!'
+app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({message, say}) {
   console.log(message);
-  console.log(message.data);
-  await say('Hello!');
+  console.log('Request ended');
+  //say 'Hello USER!'
+  const greeting = context.matches[0];
+  await say('Did you just say ');
   console.log('Said HELLO back!');
 });
 
