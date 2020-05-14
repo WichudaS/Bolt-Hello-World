@@ -12,9 +12,12 @@ const app = new App({
 });
 
 //listening to 'Hello' on anywhere in scope
-app.message("hello", async function({message, say}) {
+app.message("hello" || "Hi" || "Hey" || "hey" || "hi" || "สวัสดี" || "ฮาย", async function({message, say}) {
   //say 'Hello USER!'
-  await say('Hello, <@${message.user}>!');
+  console.log(message);
+  console.log(message.data);
+  await say('Hello!');
+  console.log('Said HELLO back!');
 });
 
 
