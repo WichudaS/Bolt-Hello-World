@@ -1,0 +1,25 @@
+{
+  "name": "bolt-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WichudaS/bolt-hello-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WichudaS/bolt-hello-world/issues"
+  },
+  "homepage": "https://github.com/WichudaS/bolt-hello-world#readme",
+  "dependencies": {
+    "@slack/bolt": "^2.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
