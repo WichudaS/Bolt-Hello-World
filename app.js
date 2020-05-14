@@ -17,7 +17,7 @@ app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({
   console.log('Request ended');
   //say 'Hello USER!'
   const greeting = context.matches[0];
-  await say('Did you just say ');
+  await say('Did you just say ' + greeting + "?");
   console.log('Said HELLO back!');
 });
 
