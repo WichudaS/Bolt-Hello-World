@@ -23,8 +23,8 @@ app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({
 });
 
 
-//[WORKS!] slash command "/mom" => send MOM input modal
-app.command('/kdc mom', async ({ command, ack, say }) => {
+//[WORKS!] slash command "/bolt" => send MOM input modal
+app.command('/bolt', async ({ command, ack, say }) => {
   // Acknowledge command request
   await ack();
   console.log("MOM REQUEST COMMAND START");
