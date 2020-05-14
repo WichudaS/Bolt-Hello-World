@@ -11,7 +11,8 @@ const app = new App({
   signingSecret: process.env.SIGNING_SECRET
 });
 
-//listening to 'Hello' on anywhere in scope
+
+//[WORKS!] listening to 'Hello' on anywhere in scope
 app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({context, say}) {
   console.log(context);
   console.log('Request ended');
@@ -21,6 +22,17 @@ app.message(/^(hi|hello|hey|Hi|Hello|HI|สวัสดี).*/, async function({
   console.log('Said HELLO back!');
 });
 
+
+//[WORKS!] slash command "/mom" => send MOM input modal
+app.command('/mom', async ({ command, ack, say }) => {
+  // Acknowledge command request
+  await ack();
+  console.log("MOM REQUEST COMMAND START");
+  console.log(command);
+  console.log("MOM REQUEST COMMAND ENDED");
+  await say("Command received!");
+  console.log("/MOM RESPONDED 👌");
+});
 
 
 
