@@ -12,7 +12,7 @@ const app = new App({
 });
 
 //listening to 'Hello' on anywhere in scope
-app.message("hello", async function(message, say) {
+app.message("hello", async function({message, say}) {
   //say 'Hello USER!'
   await say('Hello, <@${message.user}>!');
 });
